@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+
+  <style type="text/css">
+    
+    form {
+      
+      
+    }
+
+    h5 {
+    font-size: 20px;
+    color: #7b7e84;
+  }
+
+    input {
+      width: 100%;
+      height: 55px;
+      font-size: 40px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 400px;
+      font-size: 15px;
+    }
+
+    ul {
+      padding: 0;
+    }
+    
+
+    li {
+    list-style: none;
+  }
+
+    select {
+      margin-bottom: 28px;
+      height: 32px;
+    }
+
+    footer {
+    background-color: #26251D;
+    height: 200px;
+    display: block;
+  }
+  
+  .linkscontainer {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 15px;
+  }
+  
+  .margintop {
+      margin-top: 70px;
+    }
+
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    <div class="form margintop">
+      <form action="/contactform" method="POST">
+        <h4>First Name*</h4>
+        <input type="text" name="fn" placeholder="first name" required>
+        <h4>Last Name*</h4>
+        <input type="text" name="ln" placeholder="last name" required>
+        <h4>E-Mail*</h4>
+        <input type="text" name="em" placeholder="email" required>
+        <h4>Phone Number*</h4>
+        <input type="text" name="pn" placeholder="phone number" required>
+        <h4>Select Your Service Type</h4>
+        <select>
+          <option value="Select Type of Service">Select Type of Service</option>
+          <option value="Wordpress Site">Wordpress Site</option>
+          <option value="General Website">General Website</option>
+          <option value="Web Application">Web Application</option>
+          <option value="Database">Database</option>
+          <option value="Other">Other</option>
+        </select>
+        <h4>Message*</h4>
+        <textarea name="messagebody" placeholder="Message" required>
+          
+        </textarea>
+
+        <p>All Fields with * Must Be Filled Out</p>
+        <button class="btn btn-primary">Submit</button> 
+      </form>
+    </div>
+    </div>
+
+<footer>
+
+<div class="linkscontainer">
+  <div class="col-xs-4" id="footerlinks">
+    <ul>
+      <h5>Site Map</h5>
+      <a href="index.html"><li>Home</li></a>
+      <a href="about.html"><li>About</li></a>
+      <a href="projects.html"><li>Projects</li></a>
+      <a href="contact.html"><li>Contact</li></a>
+      <a href="adminlogin.html"><li>Admin Login</li></a>
+    </ul>
+  </div>
+
+  <div class="col-xs-4" id="footerlinks">
+    <ul>
+      <h5>Manuals</h5>
+      <a href="http://getbootstrap.com/components/"><li>Bootstrap</li></a>
+      <a href="https://developer.mozilla.org/en-US/"><li>MDN</li></a>
+      <a href="https://www.npmjs.com/"><li>NPM</li></a>
+      <a href="http://gitref.org/basic/"><li>GIT</li></a>
+      <a href="http://api.jquery.com/"><li>jQuery</li></a>
+      <a href="http://expressjs.com/en/4x/api.html"><li>Express</li></a>
+      
+    </ul>
+  </div>
+
+  <div class="col-xs-4" id="footerlinks">
+    <ul>
+      <h5>Social Media</h5>
+      <a href="https://www.linkedin.com/in/matthewspeiser/"><li>Linkedin</li></a>
+      <a href="https://github.com/mrspeiser"><li>Github</li></a>
+      <a href="https://twitter.com/speiserdj"><li>Twitter</li></a>
+      <a href="http://stackexchange.com/users/9173649/matthew"><li>Stack Exchange</li></a>
+      <a href="https://www.facebook.com/thespeiser"><li>Facebook</li></a>
+    </ul>
+  </div>
+
+</div>
+
+  
+
+</footer>
+<script type="text/javascript" src="assets/jq/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

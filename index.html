@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<title>Matthew Speiser Web Dev</title>
+	<link href="assets/css/carousel.css" rel="stylesheet">
+
+<style type="text/css">
+
+	body, html {
+		height: 100%
+	}
+
+	body {padding-top: 50px;}
+
+	h1 {
+		margin: 0px;
+		text-align: center;
+		font-size: 55px;
+	}
+
+	h3 {
+		margin: 0 auto;
+		text-align: center;
+		display: block;
+
+	}
+
+	h5 {
+		font-size: 20px;
+		color: #7b7e84;
+	}
+
+
+
+	ul {padding: 0;}
+
+	li {
+		list-style: none;
+	}
+
+	footer {
+		background-color: #26251D;
+		height: 200px;
+		display: block;
+	}
+
+
+	#morepics {
+		transition-property: all;
+		transition-duration: 1s;
+	}
+
+	#showmorepics {
+		border-radius: 15px;
+		padding: 10px;
+
+	}
+
+	#showmorepics:hover {
+		transition-property: all;
+		transition-duration: 1s;
+		background-color: #007BB7;
+	}
+	#footerlinks { 
+		
+
+	}
+
+	#slide {
+		float: left;
+		
+		position: relative;
+	}
+
+	#featitems {
+		position: relative;
+		display: inline-block;
+		float: left;
+
+	}
+
+	.section1 {
+		background-image: url("assets/img/backgrouds/code.jpg");
+		/*height: 100%;
+		z-index: 2;*/
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		overflow: ;
+		padding: 100px;
+	}
+
+	.icons {
+		width: 65%;
+
+		
+	}
+
+	.langlinks {
+		height: ;
+	}
+
+	.inline {
+		/*margin-top: 100px;*/
+	}
+
+	.float {
+		float: right;
+		
+	}
+	.float2 {
+		margin-left: 10px;
+	}
+
+	.section2 {
+		margin-top: 20px;
+		margin-bottom: 33px;
+	}
+
+	.section3 {
+		border-top: 1px solid gray;
+		padding-top: 15px;
+		background-image: url("assets/img/backgrouds/code2.jpg");
+		background-size: cover;
+		padding-bottom: 25px;
+		padding-right: 50px;
+		padding-left: 50px;
+
+	}
+
+	.section4 {
+	
+		margin-top: 20px;
+		width: 100%;
+
+	}
+
+	.make {
+		color: #007BB7;
+		text-decoration: underline;
+	}
+
+
+
+	.nopad {
+		padding: 0px;
+	}
+
+
+	.contactform {
+		width: 300px;
+		height: 550px;
+		background-color: #7D7D7D;
+		position: absolute;
+		transition-property: all;
+		transition-duration: 1s;
+		display: inline-block;
+		z-index: 3;
+		transform: translateY(-570px);
+		left: 50%;
+		margin-left: -150px;
+		border-radius: 15px 15px;
+		text-align: center;}
+
+	.triggerform {
+		transform:translateY(25px);
+
+	}
+
+	.displaynone {
+		transition-property: all;
+		transition-duration: 2s;
+		display: none;
+	}
+
+	.linkscontainer {
+		display: flex;
+		justify-content: space-around;
+		text-align: center;
+		margin-top: 15px;
+		padding-top: 15px;
+	}
+
+	.blackwhite {
+		background-color: #010101;
+		color: white;
+		padding: 20px;
+		border-radius: 20px;
+	}
+
+	.floatright {
+		float: right;
+	}
+
+	.floatleft {
+		float: left;
+	}
+
+	.features {
+		
+		margin: 5px;
+		padding: 5px;
+	}
+
+	.slide1 {
+
+	}
+
+	.baseline {
+		display: flex;
+		align-items: baseline;
+	}
+
+	h1.textshadow {
+		color: black;
+		text-shadow: 
+		-1px -1px white,
+		1px -1px white,
+		-1px 1px white,
+		1px 1px white
+	}
+
+	.textshadowblack {
+		color: white;
+		text-shadow: 
+		-1px -1px black,
+		1px -1px black,
+		-1px 1px black,
+		1px 1px black,
+
+		2px 2px black,
+		-2px 2px black,
+		2px -2px black,
+		-2px -2px black,
+
+		3px 3px black,
+		-3px 3px black,
+		3px -3px black,
+		-3px -3px black
+	}
+
+	.galleryfix {
+		height: 350px;
+	}
+
+	.displayfix {
+	
+
+	}
+
+	.img1 {
+		background-image: url("assets/img/gallery/adriel-kloppenburg-14828.jpg");
+		background-size: cover;
+		height: 240px;
+	}
+
+	.img2 {
+		background-image: url("assets/img/gallery/andrew-preble-199410.jpg");
+		background-size: cover;	
+		height: 240px;
+	}
+	.img3 {
+		background-image: url("assets/img/gallery/dennis-dieta-klein-123624.jpg");
+		background-size: cover;	
+		height: 240px;
+	}
+
+	.img4 {
+	background-image: url("assets/img/gallery/jakob-owens-152227.jpg");
+	background-size: cover;
+	height: 240px;
+	}
+	.img5 {
+		background-image: url("assets/img/gallery/massimo-mancini-113100.jpg");
+		background-size: cover;
+		height: 240px;
+	}
+
+	.img6 {
+		background-image: url("assets/img/gallery/nasa-89127.jpg");
+		background-size: cover;
+		height: 240px;
+	}
+	.img7 {
+		background-image: url("assets/img/gallery/phil-coffman-161243.jpg");
+		background-size: cover;
+		height: 240px;
+	}
+
+	.img8 {
+		background-image: url("assets/img/gallery/roman-arkhipov-123612.jpg");
+		background-size: cover;
+		height: 240px;
+	}
+	.img9 {
+		background-image: url("assets/img/gallery/adriel-kloppenburg-14828.jpg");
+		background-size: cover;
+		height: 240px;
+	}
+
+
+
+
+
+	input[type=text], input[type=email], input[type=password] {
+	margin: 8px;
+	padding: 10px 10px;
+	border-radius: 5px;
+	width: 70%;
+	font-size: 15px;
+	border: none;
+}
+
+input[type=submit] {
+	color: white;
+	border: none;
+	background-color: #468EBD;
+	margin: 10px;
+	width: 115px;
+	height: 30px;
+	border-radius: 7px;
+
+
+</style>
+</head>
+<body>
+<form id="contactform" class="contactform" action="" method="">
+
+	<h4>Full Name:</h4>
+	<input type="text" name="">
+	<h4>Phone Number:</h4>
+	<input type="text" name="">
+	<h4>E-mail:</h4>
+	<input type="text" name="">
+	<h4>General Project Information:</h4>
+	<textarea cols="32" rows="8"></textarea>
+	<input type="submit" name="">
+	
+</form>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+
+<div class="container-fluid section1">
+	<div class="jumbotron inline"><h1>Hello World!</h1> <h1> </h1>
+	</div>
+	<div class="btn-group">
+		<p class="float float2 contactbutton"><a class="btn btn-primary btn-lg" href="#" role="button">Quick Contact</a>
+		<p class="float"><a class="btn btn-primary btn-lg" href="projects.html" role="button">Learn More</a>
+	</div>
+</div>
+
+
+
+<div class="container section2">
+	<div class="jumbotron">
+		<h1><i class="fa fa-camera-retro" aria-hidden="true"></i> A Responsive Image Gallery</h1>
+		<hr>
+		<p>I am not a graphic designer,</p>
+		<p>So here are a bunch of beautiful images that I did not take or make:</p>
+	</div>
+
+	<div class="row">
+      <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="http://i.imgur.com/qK42fUu.jpg">
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="https://images.unsplash.com/photo-1435771112039-1e5b2bcad966?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450">
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="https://images.unsplash.com/photo-1442406964439-e46ab8eff7c4?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450">
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="https://images.unsplash.com/photo-1439524970634-649c37a69e5c?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1450&h=825&fit=crop&s=bfda9916c885869b43b70738693428d9">
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="https://images.unsplash.com/photo-1444090542259-0af8fa96557e?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450">
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="https://images.unsplash.com/photo-1434543177303-ef2cc7707e0d?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450">
+        </div>
+      </div>
+
+      <div id="morepics" class="displaynone">
+      <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="https://images.unsplash.com/photo-1436262513933-a0b06755c784?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450">
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="https://images.unsplash.com/photo-1439396087961-98bc12c21176?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450">
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="https://images.unsplash.com/photo-1439694458393-78ecf14da7f9?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450">
+      </div>
+    </div>
+  </div>
+
+	
+	</div>
+
+	
+
+	<div id="showmorepics"><h3 id="buttontext">Show More Pictures</h3></div>
+</div>
+
+<hr>
+
+<div class="container-fluid section3">
+	<div class="interactive">
+		<h1 class="blackwhite">I like to <span class="make"><strong>Make</strong></span> Things</h1>
+		
+		<div class="demo">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAQKAAAAJGI1YzZiNDUxLWE1ZjktNDYwOC04MjQ4LTA5ZTM3ZDYyMWFkNw.jpg" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="textshadowblack">Connecting Databases</h1>
+              <p class="textshadowblack">If you're looking for a website with a database, I can help! Using either MongoDB or MySQL I can provide you with data persistance.</p>
+              <p><a class="btn btn-lg btn-primary" href="projects.html" role="button">Learn More</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" src="http://www.rubycorner.com/wp-content/uploads/2016/03/codecademy-is-1-million-strong-and-launching-a-teacher-tool-140f32c71b.jpg" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="textshadowblack">User Authentication &amp; Privileges</h1>
+              <p class="textshadowblack">Are there going to be registered users accessing your website? I can help, let's figure out what you need.</p>
+              <p><a class="btn btn-lg btn-primary" href="projects.html" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide" src="http://4.bp.blogspot.com/-ReIWYG3kQOE/VhwNCt3aZBI/AAAAAAAAAbk/ywdkvZxMfK4/s1600/Customer-Care-Pic4-Act-Now.jpg" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="textshadow">Personable Professional Communication</h1>
+              <p class="textshadowblack">Over 10 years of customer service experience, I can assure you the highest level of customer satisfaction.</p>
+              <p><a class="btn btn-lg btn-primary" href="contact.html" role="button">Contact</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+		</div>
+		
+	</div>
+	<a class="btn btn-success btn-lg" href="projects.html">Go To Projects</a>
+</div>
+
+<div class="container-fluid section4">
+	<div class="jumbotron nopad">
+	<div>
+		<h1>Technology I Use</h1>
+	</div>
+		<hr>
+
+	</div>
+	<div class="row baseline">
+		<div class="col-sm-3 col-xs-6 langlinks"> 
+			<img class="icons" src="assets/img/language-icons/html5.png" height=""></div>
+		<div class="col-sm-3 col-xs-6 langlinks"> 
+			<img class="icons" src="assets/img/language-icons/bootstrap.png"></div>
+		<div class="col-sm-3 col-xs-6 langlinks"> 
+			<img class="icons" src="assets/img/language-icons/jquery.png"></div>
+		<div class="col-sm-3 col-xs-6 langlinks"> 
+			<img class="icons" src="assets/img/language-icons/wordpress.png"></div>
+		
+	</div>
+	<div class="row baseline">
+		<div class="col-sm-3 col-xs-6 langlinks"> 
+			<img class="icons" src="assets/img/language-icons/nodejs.png"></div>
+		<div class="col-sm-3 col-xs-6 langlinks"> 
+			<img class="icons" src="https://www.tomas-dvorak.cz/images/npm-logo.png"></div>
+		<div class="col-sm-3 col-xs-6 langlinks"> 
+			<img class="icons" src="assets/img/language-icons/mongodb.png"></div>
+		<div class="col-sm-3 col-xs-6 langlinks"> 
+			<img class="icons" src="assets/img/language-icons/php_mysql.png"></div>
+		
+	</div>
+</div>
+
+<footer>
+
+<div class="linkscontainer">
+	<div class="col-xs-4" id="footerlinks">
+		<ul>
+			<h5>Site Map</h5>
+			<a href="index.html"><li>Home</li></a>
+			<a href="about.html"><li>About</li></a>
+			<a href="projects.html"><li>Projects</li></a>
+			<a href="contact.html"><li>Contact</li></a>
+			<a href="adminlogin.html"><li>Admin Login</li></a>
+		</ul>
+	</div>
+
+	<div class="col-xs-4" id="footerlinks">
+		<ul>
+			<h5>Manuals</h5>
+			<a href="http://getbootstrap.com/components/"><li>Bootstrap</li></a>
+			<a href="https://developer.mozilla.org/en-US/"><li>MDN</li></a>
+			<a href="https://www.npmjs.com/"><li>NPM</li></a>
+			<a href="http://gitref.org/basic/"><li>GIT</li></a>
+			<a href="http://api.jquery.com/"><li>jQuery</li></a>
+			<a href="http://expressjs.com/en/4x/api.html"><li>Express</li></a>
+			
+		</ul>
+	</div>
+
+	<div class="col-xs-4" id="footerlinks">
+		<ul>
+			<h5>Social Media</h5>
+			<a href="https://www.linkedin.com/in/matthewspeiser/"><li>Linkedin</li></a>
+			<a href="https://github.com/mrspeiser"><li>Github</li></a>
+			<a href="https://twitter.com/speiserdj"><li>Twitter</li></a>
+			<a href="http://stackexchange.com/users/9173649/matthew"><li>Stack Exchange</li></a>
+			<a href="https://www.facebook.com/thespeiser"><li>Facebook</li></a>
+		</ul>
+	</div>
+
+</div>
+
+	
+
+</footer>
+
+<script type="text/javascript" src="assets/jq/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	// var contactform = document.querySelector('.contactform')
+
+	// document.querySelector('.contactbutton').addEventListener("click", function() {
+	// 	contactform.classList.toggle("triggerform");
+	// });
+</script>
+<script type="text/javascript">
+	$('#morepics .thumbnail').click(function() {
+	 	alert("you clicked a thumbnail");
+	 });
+
+	$('#showmorepics').click(function(){
+		$('#morepics').toggleClass("displaynone");
+
+		if ($('#morepics').hasClass("displaynone")) {
+
+            $('#buttontext').html("Show More Pictures");
+        } else {
+            $('#buttontext').html("Show Less Pictures");
+        }
+	});
+
+	$('.contactbutton').click(function(){
+		$('#contactform').toggleClass('triggerform');
+
+	});
+
+
+
+
+	$(document).click(function(){
+		console.log($('#slide').width());
+	});
+
+	var width = $('.features').width();
+
+
+
+	$('#next').click(function(){
+		$('.slide').cs
+	});
+
+</script>
+
+</body>
+</html>
